@@ -114,30 +114,6 @@
 	**/
 	window.addEventListener("load",function()
 	{
-		var data_goscroll;
-		data_goscroll = document.querySelectorAll("[data-scroll-go]");
-		data_goscroll.forEach(function(item)
-		{
-			if(item.onclick === null)//onclick not exists
-			{
-				item.onclick=function()
-				{
-					window.goscroll.go(this);
-				};
-			}
-		});
-		//////////////////////////////////////////////////////////////////
-		data_goscroll = document.querySelectorAll("[data-scroll-to]");
-		data_goscroll.forEach(function(item)
-		{
-			if(item.onclick === null)//onclick not exists
-			{
-				item.onclick=function()
-				{
-					window.goscroll.goto(this);
-				};
-			}
-		});
-		//////////////////////////////////////////////////////////////////
+		//soon
 	},false);
 }(window,document));
