@@ -12,7 +12,7 @@ Tiny Library for fix problem of language selection in text.
 
 ## Supported languages
   - [x] Persian/Farsi (`fa`)
-  - [x] Arabic (`ar`) , Not Complate!
+  - [ ] Arabic (`ar`)
   - [x] English (`en`)
   
 
