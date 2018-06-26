@@ -1,1 +1,25 @@
-
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<title>Example FixLanguageType.js</title>
+		<meta charset="utf-8">
+		<script type="text/javascript" src="FixLanguageType.js"></script>
+	</head>
+	<body>
+		<h1>Example FixLanguageType.js</h1>
+		<br><br>
+		Enter Text : 
+		<input type="text" name="text" id="text">
+		<button onclick="en_to_fa();">Check</button>
+		<br>
+		<div id="result"></div>
+		<script type="text/javascript">
+		var text=document.querySelector("input#text");
+		var result=document.querySelector("#result");
+		function en_to_fa()
+		{
+			result.innerHTML=fixtype.en_fa( text.value );
+		}
+		</script>
+	</body>
+</html>
