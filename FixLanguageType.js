@@ -1,4 +1,4 @@
-l/**
+/**
 *
 * @Name : FixLanguageType.js
 * @Version : 1.1
