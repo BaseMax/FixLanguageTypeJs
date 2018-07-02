@@ -1,4 +1,4 @@
-/**
+l/**
 *
 * @Name : FixLanguageType.js
 * @Version : 1.1
@@ -81,7 +81,7 @@
 		//	value=replaceAll(value,keys[i],values[i]);
 		for(var i=0;i<keymap.length;i++)
 		{
-			console.log(keymap[i]);
+			//console.log(keymap[i]);
 			value=replaceAll(value,keymap[i][0],keymap[i][1]);
 		}
 		return value;
@@ -101,7 +101,7 @@
 		//	value=replaceAll(value,keys[i],values[i]);
 		for(var i=0;i<keymap.length;i++)
 		{
-			console.log(keymap[i]);
+			//console.log(keymap[i]);
 			value=replaceAll(value,keymap[i][1],keymap[i][0]);
 		}
 		return value;
