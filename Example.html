@@ -10,7 +10,8 @@
 		<br><br>
 		Enter Text : 
 		<input type="text" name="text" id="text">
-		<button onclick="en_to_fa();">Check</button>
+		<button onclick="en_to_fa();">Convert to fa</button>
+		<button onclick="fa_to_en();">Convert to en</button>
 		<br>
 		<div id="result"></div>
 		<script type="text/javascript">
@@ -19,6 +20,10 @@
 		function en_to_fa()
 		{
 			result.innerHTML=fixtype.en_fa( text.value );
+		}
+		function fa_to_en()
+		{
+			result.innerHTML=fixtype.fa_en( text.value );
 		}
 		</script>
 	</body>
