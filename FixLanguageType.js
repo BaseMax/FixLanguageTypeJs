@@ -20,37 +20,38 @@
 	**/
 	var keymap=
 	{
-		'q':"ض",
-		'w':"ص",
-		'e':"ث",
-		'r':"ق",
-		't':"ف",
-		'y':"غ",
-		'u':"ع",
-		'i':"ه",
-		'o':"خ",
-		'p':"ح",
-		'[':"ج",
-		']':"چ",
-		'a':"ش",
-		's':"س",
-		'd':"ی",
-		'f':"ب",
-		'g':"ل",
-		'h':"ا",
-		'j':"ت",
-		'k':"ن",
-		'l':"م",
-		';':"ک",
-		'\'':"گ",
-		'z':"ظ",
-		'x':"ط",
-		'c':"ز",
-		'v':"ر",
-		'b':"ذ",
-		'n':"د",
-		'm':"پ",
-		',':"و",
+		["q":"ض"],
+		["w":"ص"],
+		["e":"ث"],
+		["r":"ق"],
+		["t":"ف"],
+		["y":"غ"],
+		["u":"ع"],
+		["i":"ه"],
+		["o":"خ"],
+		["p":"ح"],
+		["[":"ج"],
+		["]":"چ"],
+		["a":"ش"],
+		["s":"س"],
+		["d":"ی"],
+		["m":"ئ"],
+		["f":"ب"],
+		["g":"ل"],
+		["h":"ا"],
+		["j":"ت"],
+		["k":"ن"],
+		["l":"م"],
+		[";":"ک"],
+		["\"":"گ"],
+		["z":"ظ"],
+		["x":"ط"],
+		["c":"ز"],
+		["v":"ر"],
+		["b":"ذ"],
+		["n":"د"],
+		["m":"پ"],
+		[",":"و"],
 	};
 	/**
 	* @function replaceAll
@@ -72,10 +73,12 @@
 	**/
 	var en_fa=function(value)
 	{
-		var keys=Object.keys(keymap);
-		var values=Object.values(keymap);
-		for(var i=0;i<keys.length;i++)
-			value=replaceAll(value,keys[i],values[i]);
+		//var keys=Object.keys(keymap);
+		//var values=Object.values(keymap);
+		//for(var i=0;i<keys.length;i++)
+		//	value=replaceAll(value,keys[i],values[i]);
+		for(var i=0;i<keymap.length;i++)
+			value=replaceAll(value,keymap[i][0],keymap[i][1]);
 		return value;
 	};
 	/**
@@ -87,10 +90,12 @@
 	**/
 	var fa_en=function(value)
 	{
-		var keys=Object.values(keymap);
-		var values=Object.keys(keymap);
-		for(var i=0;i<keys.length;i++)
-			value=replaceAll(value,keys[i],values[i]);
+		//var keys=Object.values(keymap);
+		//var values=Object.keys(keymap);
+		//for(var i=0;i<keys.length;i++)
+		//	value=replaceAll(value,keys[i],values[i]);
+		for(var i=0;i<keymap.length;i++)
+			value=replaceAll(value,keymap[i][1],keymap[i][0]);
 		return value;
 	};
 	/**
