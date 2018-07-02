@@ -1,9 +1,9 @@
 /**
 *
 * @Name : FixLanguageType.js
-* @Version : 1.0
+* @Version : 1.1
 * @Programmer : Max
-* @Date : 2018-06-26
+* @Date : 2018-06-26-2018-07-02
 * @Released under : https://github.com/BaseMax/FixLanguageTypeJs/blob/master/LICENSE
 * @Repository : https://github.com/BaseMax/FixLanguageTypeJs
 *
@@ -19,40 +19,41 @@
 	* @return array (key=en , value=fa)
 	**/
 	var keymap=
-	{
-		["q":"ض"],
-		["w":"ص"],
-		["e":"ث"],
-		["r":"ق"],
-		["t":"ف"],
-		["y":"غ"],
-		["u":"ع"],
-		["i":"ه"],
-		["o":"خ"],
-		["p":"ح"],
-		["[":"ج"],
-		["]":"چ"],
-		["a":"ش"],
-		["s":"س"],
-		["d":"ی"],
-		["m":"ئ"],
-		["f":"ب"],
-		["g":"ل"],
-		["h":"ا"],
-		["j":"ت"],
-		["k":"ن"],
-		["l":"م"],
-		[";":"ک"],
-		["\"":"گ"],
-		["z":"ظ"],
-		["x":"ط"],
-		["c":"ز"],
-		["v":"ر"],
-		["b":"ذ"],
-		["n":"د"],
-		["m":"پ"],
-		[",":"و"],
-	};
+	[
+		["q","ض"],
+		["w","ص"],
+		["e","ث"],
+		["r","ق"],
+		["t","ف"],
+		["y","غ"],
+		["u","ع"],
+		["i","ه"],
+		["o","خ"],
+		["p","ح"],
+		["[","ج"],
+		["]","چ"],
+		["a","ش"],
+		["s","س"],
+		["d","ی"],
+		["m","ئ"],
+		["f","ب"],
+		["g","ل"],
+		["h","ا"],
+		["j","ت"],
+		["k","ن"],
+		["l","م"],
+		[";","ک"],
+		["\"","گ"],
+		["z","ظ"],
+		["x","ط"],
+		["c","ز"],
+		["v","ر"],
+		["b","ذ"],
+		["n","د"],
+		["\\","پ"],
+		["`","پ"],
+		[",","و"]
+	];
 	/**
 	* @function replaceAll
 	*
@@ -60,9 +61,9 @@
 	*
 	* @return string
 	**/
-	var replaceAll = function(input,str1, str2, ignore)
+	var replaceAll=function(input,str1,str2,ignore)
 	{
-		return input.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+ 		return input.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
 	}
 	/**
 	* @function en_fa
@@ -78,7 +79,10 @@
 		//for(var i=0;i<keys.length;i++)
 		//	value=replaceAll(value,keys[i],values[i]);
 		for(var i=0;i<keymap.length;i++)
+		{
+			console.log(keymap[i]);
 			value=replaceAll(value,keymap[i][0],keymap[i][1]);
+		}
 		return value;
 	};
 	/**
@@ -95,7 +99,10 @@
 		//for(var i=0;i<keys.length;i++)
 		//	value=replaceAll(value,keys[i],values[i]);
 		for(var i=0;i<keymap.length;i++)
+		{
+			console.log(keymap[i]);
 			value=replaceAll(value,keymap[i][1],keymap[i][0]);
+		}
 		return value;
 	};
 	/**
