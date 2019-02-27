@@ -1,5 +1,5 @@
 # FixLanguageType
-Tiny Library for fix problem of language selection in text.
+Tiny Library for fix problem of language selection in type text.
 
 ![FixLanguageType.min.js File Size](https://img.shields.io/badge/Compressed%20Size-973%20Bytes-blue.svg) ![FixLanguageType.min.js Validation Code](https://img.shields.io/badge/Validation%20Code-Check-green.svg)
 
